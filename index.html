@@ -1,0 +1,434 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>默纤工业服 | Moxan Industry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg,#0f0f0f,#111827,#000000);
+            color: #fff;
+            scroll-behavior: smooth;
+        }/* ===== NAVBAR ===== */
+        body {
+    background-image: url('https://images.cnblogs.com/cnblogs_com/blogs/720650/galleries/2280396/o_260218092021_1000030564.jpg'); /* 背景图路径 */
+    background-size: cover;       /* 图片拉伸覆盖整个屏幕 */
+    background-position: center;  /* 图片居中显示 */
+    background-repeat: no-repeat; /* 不重复 */
+    background-attachment: fixed; /* 滚动时固定背景 */
+}
+    nav {
+        position: fixed;
+        top:0;
+        width:100%;
+        backdrop-filter: blur(12px);
+        background: rgba(0,0,0,0.7);
+        border-bottom:1px solid rgba(255,255,255,0.2);
+        padding:15px 20px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        z-index:1000;
+    }
+    .logo {
+        display:flex;
+        align-items:center;
+        gap:10px;
+        font-size:14px;
+    }
+    .logo-box {
+        width:38px;
+        height:38px;
+        background:rgba(255,255,255,0.2);
+        border-radius:10px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:10px;
+    }
+    nav ul {
+        list-style:none;
+        display:flex;
+        gap:20px;
+    }
+    nav ul li a {
+        text-decoration:none;
+        color:#aaa;
+        font-size:14px;
+        transition:0.3s;
+    }
+    nav ul li a:hover { color:#4da3ff; }
+    .nav-buttons a {
+        margin-left:8px;
+        padding:6px 12px;
+        border-radius:20px;
+        text-decoration:none;
+        font-size:12px;
+        transition:0.3s;
+    }
+    .btn-outline {
+        border:1px solid #4da3ff;
+        color:#4da3ff;
+    }
+    .btn-outline:hover { background:#4da3ff; color:#000; }
+    .btn-main {
+        background:#2563eb;
+        color:#fff;
+    }
+    .btn-main:hover { background:#1d4ed8; }
+
+    /* ===== SECTION ===== */
+    section { padding:110px 20px 80px; text-align:center; }
+    .hero h1 {
+        font-size:42px;
+        margin-bottom:16px;
+        animation: fadeUp 1s ease forwards;
+    }
+    .hero h1 {
+    color: #ffffff; /* 白色文字 */
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5); /* 黑色半透明阴影 */
+}
+    .hero p { color:#aaa; margin-bottom:15px; font-size:14px; }
+    .server-address {
+        margin-bottom:25px;
+        font-size:15px;
+        color:#4da3ff;
+        word-break:break-all;
+    }
+    .action-buttons a {
+        display:block;
+        margin:12px auto;
+        padding:14px 20px;
+        border-radius:30px;
+        text-decoration:none;
+        font-size:15px;
+        width:90%;
+        max-width:320px;
+        transition:0.3s;
+    }
+    /* 马卡龙半透明按钮 */
+.btn-green {
+    background: rgba(102, 205, 170, 0.6); /* 薄荷绿半透明 */
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+}
+.btn-green:hover {
+    background: rgba(102, 205, 170, 1); /* 鼠标悬停变不透明 */
+}
+
+.btn-indigo {
+    background: rgba(147, 112, 219, 0.6); /* 淡紫色半透明 */
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+}
+.btn-indigo:hover {
+    background: rgba(147, 112, 219, 1); 
+}
+
+.btn-orange {
+    background: rgba(255, 182, 112, 0.6); /* 柔橙色半透明 */
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+}
+.btn-orange:hover {
+    background: rgba(255, 182, 112, 1); 
+}
+
+/* 可选：加圆角和轻微阴影，让马卡龙感更明显 */
+.btn-green, .btn-indigo, .btn-orange {
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+    /* ===== FEATURES ===== */
+    .features { display:flex; flex-direction:column; gap:20px; align-items:center; }
+    .card {
+        background:rgba(255,255,255,0.1);
+        border:1px solid rgba(255,255,255,0.2);
+        padding:25px;
+        border-radius:20px;
+        width:95%;
+        max-width:350px;
+        transition:0.3s;
+    }
+    .card:hover {
+        transform:translateY(-6px);
+        background:rgba(255,255,255,0.2);
+    }
+
+    /* ===== OWNER ===== */
+    .owner-box {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+        background:rgba(255,255,255,0.1);
+        padding:30px 20px;
+        border-radius:20px;
+    }
+    .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* 保持比例填充 */
+}
+    /* ===== MARKDOWN AREA ===== */
+    .markdown-area {
+        background:rgba(255,255,255,0.1);
+        padding:25px;
+        border-radius:20px;
+        text-align:left;
+        max-width:95%;
+        margin:0 auto;
+        font-size:14px;
+        line-height:1.6;
+    }
+    .markdown-area img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    footer {
+        border-top:1px solid rgba(255,255,255,0.1);
+        padding:20px;
+        text-align:center;
+        color:#777;
+        font-size:12px;
+    }
+
+    /* ===== RESPONSIVE DESKTOP ===== */
+    @media(min-width:768px){
+        nav { padding:15px 40px; }
+        .logo { font-size:16px; }
+        .hero h1 { font-size:56px; }
+        .hero p { font-size:18px; }
+        .action-buttons a { display:inline-block; width:auto; }
+        .features { flex-direction:row; justify-content:center; }
+        .owner-box { flex-direction:row; }
+        .markdown-area { max-width:900px; font-size:15px; }
+    }
+/* Width的值可根据喜好调整（屏幕的宽度） */
+@media (max-width: 800px) {
+  /* Aplayer音乐标签伸缩 */
+  .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+    left: -66px !important;
+    /* 默认情况下缩进左侧66px，只留一点箭头部分 */
+  }
+ 
+  .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+    left: 0 !important;
+    /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
+  }
+}
+/* Aplayer日间模式调整 */
+/* 背景色 */
+.aplayer {
+  background: rgba(174, 238, 238, 0.6) !important;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+ 
+.aplayer.aplayer-fixed .aplayer-lrc:after,
+.aplayer.aplayer-fixed .aplayer-lrc:before {
+  display: none;
+}
+ 
+.aplayer.aplayer.aplayer-fixed .aplayer-body {
+  background: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+}
+ 
+/* 滚动条 */
+.aplayer .aplayer-list ol::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+.aplayer .aplayer-list ol::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: var(--theme-color) !important;
+}
+ 
+.aplayer .aplayer-list ol::-webkit-scrollbar-thumb:hover {
+  background-color: var(--theme-color) !important;
+}
+ 
+/* 圆角 */
+.aplayer.aplayer-fixed .aplayer-list {
+  border-radius: 6px 6px 0 0 !important;
+}
+ 
+.aplayer.aplayer-fixed .aplayer-miniswitcher {
+  border-radius: 0 6px 6px 0 !important;
+}
+ 
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  transition: 0.28s !important;
+  border-radius: 6px !important;
+}
+ 
+/* 选中与播放中歌曲激活颜色 */
+.aplayer .aplayer-list ol li:hover {
+  background: var(--theme-color) !important;
+}
+ 
+.aplayer .aplayer-list ol li.aplayer-list-light {
+  background: var(--theme-color) !important;
+}
+ 
+/* 歌词 */
+.aplayer-lrc p {
+  color: #ffffff !important;
+  text-shadow: #000000 1px 0 0, #000000 0 1px 0, #000000 -1px 0 0, #000000
+      0 -1px 0 !important;
+}
+ 
+/* Aplayer黑暗模式 */
+[theme="dark"] 
+.aplayer {
+  background: rgba(22, 22, 22, 0.6) !important;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+ 
+[theme="dark"] 
+.aplayer.aplayer-fixed .aplayer-body {
+  background: rgba(22, 22, 22, 0.6) !important;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+ 
+[theme="dark"]
+  .aplayer
+  .aplayer-info
+  .aplayer-controller
+  .aplayer-time
+  .aplayer-icon
+  path {
+  fill: #d4d4d4;
+}
+ 
+[theme="dark"] 
+.aplayer .aplayer-list ol li:hover {
+  background: var(--theme-color) !important;
+}
+ 
+[theme="dark"] 
+.aplayer .aplayer-list ol li.aplayer-list-light {
+  background: var(--theme-color) !important;
+}
+ 
+[theme="dark"] 
+.aplayer .aplayer-info .aplayer-controller .aplayer-time {
+  color: #d4d4d4;
+}
+ 
+[theme="dark"] 
+.aplayer .aplayer-list ol li .aplayer-list-index {
+  color: #d4d4d4;
+}
+ 
+[theme="dark"] 
+.aplayer .aplayer-list ol li .aplayer-list-author {
+  color: #d4d4d4;
+}
+ 
+    @keyframes fadeUp {
+        from { opacity:0; transform:translateY(30px); }
+        to { opacity:1; transform:translateY(0); }
+    }
+</style>
+
+</head>
+<body><nav>
+    <div class="logo">
+        <div class="logo-box">`o'</div>
+        <div>默纤工业服</div>
+    </div>
+    <ul>
+        <li><a href="#home">首页</a></li>
+        <li><a href="#features">信息</a></li>
+        <li><a href="#owner">服主</a></li>
+        <li><a href="#about">介绍</a></li>
+    </ul>
+    <div class="nav-buttons">
+        <a href="https://www.moxan.top" target="_blank" class="btn-outline">默纤主站</a>
+    </div>
+</nav><section id="home" class="hero">
+    <h1>默纤工业服</h1>
+    <p>Moxan Industry · Minecraft 1.12.2</p>
+    <div class="server-address">in.mc.moxan.top</div>
+    <div class="action-buttons">
+        <a href="https://www.123865.com/s/uKzlVv-BWeud" class="btn-green">游戏下载</a>
+        <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=LX92Vx6kuJPN0TmHwQXzMsQQROt5kVjmFw1F7KmQq9n5i5vGAWoHyO%2ByoNl0JY9T&busi_data=eyJncm91cENvZGUiOiI4NjYxNTczNTYiLCJ0b2tlbiI6IlNOazZqYjRIaERYcmJzUnFlZHhIQ3Bac1BvTUFDd1J2dkduUTZ5c3Q3bk1TRTZSSVNKekthbmNRQjJHVHBWSFQiLCJ1aW4iOiIxNjEwNzM3MzQ2In0%3D&data=kjldA4XNuoSZ7OtfzYB2iCh3BWdEqYe5QPjKlbYehR4AR3qdN2ry6o_El1Ac0jFHfDS0rRIAjo0lir8wOncQUA&svctype=4&tempid=h5_group_info" class="btn-indigo">加入QQ群</a>
+        <a href="https://ycnfnsu8fx4f.feishu.cn/docx/VShTdtJgJonJDGx5QnRcwMnTnhh" class="btn-orange">教程文档</a>
+    </div>
+</section><section id="features">
+    <h2 style="margin-bottom:30px;">服务器特色</h2>
+    <div class="features">
+        <div class="card">
+            <h3>工业科技</h3>
+            <p>沉浸式工业整合玩法体验。</p>
+        </div>
+        <div class="card">
+            <h3>稳定运行</h3>
+            <p>高性能服务器，流畅不卡顿。</p>
+        </div>
+        <div class="card">
+            <h3>长期运营</h3>
+            <p>持续更新，长期发展。</p>
+        </div>
+    </div>
+</section><section id="owner">
+    <h2 style="margin-bottom:30px;">服务器管理</h2>
+    <div class="owner-box">
+        <div class="avatar">
+        <img src="https://images.cnblogs.com/cnblogs_com/blogs/720650/galleries/2280396/o_260218094214_1000012070.png" alt="服主 momo_Trace">
+        </div>
+        <div>
+            <h3>服主：momo_Trace</h3>
+            <p>邮箱：trace@moxan.top</p>
+        </div>
+    </div>
+</section><section id="about">
+    <h2 style="margin-bottom:30px;">服务器介绍</h2>
+    <div class="markdown-area">
+        <h2>大家好 本服为非营利性MC工业Forge模组服务器：默纤工业</h2>
+<p>本服创建于<code>2026年2月8日</code>,是基于Forge1.12.2的服务端。</p>
+<h3>本服服务器地址：<code>1.mc.moxan.top</code></h3>
+<p>服务器唯一官网<code>in.mc.moxan.top</code></p>
+<h5>&quot;模组介绍、教程，游戏疑难问答&quot;请点击主页<code>教程文档</code>按钮</h5>
+<hr>
+<p>本服为为<strong>纯工业内容</strong>，本整合包主要构成为工业时代2本体及拓展、通用机械MeK、应用能源AE2、星系、暮色森林等模组</p>
+<p>游玩过任何一种上述模组的玩家即可上手<br><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218154410496-1587144076.png" alt=""><br><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218154431992-1225588667.png" alt=""></p>
+<hr>
+<h4>为增强游戏性添加了FPS枪械与家具等辅助模组</h4>
+<p><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218154500471-1932465406.png" alt=""><br><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218154538739-1416222780.png" alt=""></p>
+<hr>
+<h4>内含多种光影可供选择（基于Opifine）</h4>
+<p><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218154630545-880117166.png" alt=""></p>
+<hr>
+<p>服务器增加了煤矿和铁矿的刷新数量</p>
+<p>后期可使用Mek的采矿机采集其他矿石，效率颇高</p>
+<hr>
+<h5>游戏截图</h5>
+<p><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218154804224-1574687748.png" alt=""><br><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218154822417-2109917250.png" alt=""><br><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218154840748-582896341.png" alt=""><br><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218154905276-1209938994.png" alt=""><br>↑火箭发射井<br><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218155206279-1762016228.png" alt=""><br>↑风力发电网<br><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218155243187-1838547286.png" alt=""><br><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218155304588-48910471.png" alt=""><br><img src="https://img2024.cnblogs.com/blog/2655972/202602/2655972-20260218155327382-937694611.png" alt=""></p>
+
+    </div>
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+<script src="https://files.cnblogs.com/files/wkfvawl/APlayer.min.js"></script>
+<div data-autoplay="true" id="aplayer" class="aplayer"  data-id="17766947382" data-server="netease" data-type="playlist" data-fixed="true" mini=true data-listfolded="true" data-order="random" theme=dark data-theme="#F58EA8"></div>
+
+<script src="https://unpkg.com/meting@1.2/dist/Meting.min.js"></script>
+</section><footer>
+    默纤科技 ©️2026 版权所有
+</footer></body>
+</html>
